@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Evan-10 Extreme Performance</title>
+    <style>
+        /* Eliminamos todo lo que consuma RAM */
+        * { margin: 0; padding: 0; overflow: hidden; background: #000; }
+        
+        body, html { height: 100%; width: 100%; }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            /* Trucos de renderizado para ganar FPS */
+            image-rendering: optimizeSpeed;             /* Antiguos navegadores */
+            image-rendering: -moz-crisp-edges;          /* Firefox */
+            image-rendering: pixelated;                 /* Chrome/Safari */
+            image-rendering: -webkit-optimize-contrast;
+        }
+    </style>
+</head>
+<body>
+
+    <iframe 
+        id="game"
+        src="https://happinessad.github.io/html/a3/" 
+        allow="autoplay; fullscreen; keyboard; gpu" 
+        loading="eager">
+    </iframe>
+
+    <script>
+        // Le dice al navegador que este proceso es de alta prioridad
+        console.log("Sistema Evan-10: Inyectando optimización de GPU...");
+    </script>
+</body>
+</html>
